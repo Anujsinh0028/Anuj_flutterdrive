@@ -1,7 +1,4 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:no_60/back.dart';
 import 'package:no_60/first.dart';
 // import 'package:restaurantui/Screens/restaurant.dart';
 
@@ -26,12 +23,12 @@ class OrderPageState extends State<OrderPage> {
       
           child: Column(
             children: [
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
 
-              Container(
+              SizedBox(
                 height: 140,
                 child: Container(
-                  margin: EdgeInsets.only(left: 25,right: 25),
+                  margin: const EdgeInsets.only(left: 25,right: 25),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,7 +39,7 @@ class OrderPageState extends State<OrderPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (builder) => first()));
+                                    builder: (builder) => const first()));
                           });
                         },
                         child: Container(
@@ -52,17 +49,17 @@ class OrderPageState extends State<OrderPage> {
                             borderRadius: BorderRadius.circular(100),
                             color: Colors.white,
                           ),
-                          child: Icon(Icons.arrow_back),
+                          child: const Icon(Icons.arrow_back),
                         ),
                       ),
                       InkWell(
                         onTap: () {
-                          setState(() {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (builder) => back()));
-                          });
+                          // setState(() {
+                          //   Navigator.push(
+                          //       context,
+                          //       MaterialPageRoute(
+                          //           builder: (builder) => const back()));
+                          // });
                         },
                         child: Container(
                           width: 40,
@@ -71,7 +68,7 @@ class OrderPageState extends State<OrderPage> {
                             borderRadius: BorderRadius.circular(100),
                             color: Colors.white,
                           ),
-                          child: Icon(Icons.favorite_border_outlined),
+                          child: const Icon(Icons.favorite_border_outlined),
                         ),
                       ),
                     ],
@@ -82,7 +79,7 @@ class OrderPageState extends State<OrderPage> {
               Container(
                 // height: ,
                 // height: MediaQuery.sizeOf(context).height,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(50),
                       topRight: Radius.circular(50)),
@@ -105,17 +102,17 @@ class OrderPageState extends State<OrderPage> {
                     Container(
                       transform: Matrix4.translationValues(0,-30, 0),
                       // color: Colors.amber,
-                      child: Text(
+                      child: const Text(
                         "Sei Ua Samun Phrai",
                         style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                     ),
                     
-                    Container(
+                    SizedBox(
                       // color: Colors.amber,
                       width: MediaQuery.sizeOf(context).width/1.5,
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text("🕙50min",),
@@ -125,7 +122,7 @@ class OrderPageState extends State<OrderPage> {
                       ),
                     ),
       
-                    SizedBox(height: 30,),
+                    const SizedBox(height: 30,),
 
                     Container(
                       width: 140,
@@ -140,8 +137,8 @@ class OrderPageState extends State<OrderPage> {
                         children: [
                         
                         Container(
-                          padding: EdgeInsets.only(left: 12),
-                          child: Text("₹12",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22),)),
+                          padding: const EdgeInsets.only(left: 12),
+                          child: const Text("₹12",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22),)),
 
                         Stack(
                           children: [Container(
@@ -154,7 +151,7 @@ class OrderPageState extends State<OrderPage> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                         
-                                Container(
+                                SizedBox(
                                   width: 30,
                                   child: TextButton(onPressed: (){
                                     setState(() {
@@ -162,7 +159,7 @@ class OrderPageState extends State<OrderPage> {
                                     });
                                 
                                   },
-                                   child: Text("-",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                                   child: const Text("-",style: TextStyle(fontSize: 20,color: Colors.black),)),
                                 ),
 
                                 // SizedBox(width: 30,),
@@ -170,7 +167,7 @@ class OrderPageState extends State<OrderPage> {
                                 // padding: EdgeInsets.all,
 
                                     // transform: Matrix4.translationValues(0, 0, 0),
-                                    margin: EdgeInsets.only(top: 5,bottom: 5),
+                                    margin: const EdgeInsets.only(top: 5,bottom: 5),
                                     width: 30,
                                     height: 30,
                                     decoration: BoxDecoration(
@@ -180,12 +177,12 @@ class OrderPageState extends State<OrderPage> {
                                      child: Center(child: Text("$count",)),
                                 ),
 
-                                   Container(
+                                   SizedBox(
                                     width: 30,
                                      child: TextButton(onPressed: (){
                                       count += 1;
                                        },
-                                      child: Text("+",style: TextStyle(fontSize: 20,color: Colors.black),)),
+                                      child: const Text("+",style: TextStyle(fontSize: 20,color: Colors.black),)),
                                    ),
                               
                         
@@ -213,18 +210,18 @@ class OrderPageState extends State<OrderPage> {
                       ]),
                     ),
 
-                    SizedBox(height: 30,),
+                    const SizedBox(height: 30,),
       ///////////////////////
                     Container(
-                      margin: EdgeInsets.only(left: 35),
+                      margin: const EdgeInsets.only(left: 35),
                       alignment: Alignment.topLeft,
-                      child: Text("Ingredience",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                      child: const Text("Ingredience",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                       ),
-                       SizedBox(height: 10,),
+                       const SizedBox(height: 10,),
       ///////////////////////////////
                      Container(
                       width: MediaQuery.sizeOf(context).width,
-                      margin: EdgeInsets.only(left: 20,right: 30),
+                      margin: const EdgeInsets.only(left: 20,right: 30),
                       height: 100,
                       // color: Colors.amber,
                       child: Row(
@@ -236,7 +233,7 @@ class OrderPageState extends State<OrderPage> {
                             
                           },
                           child: Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.white,
@@ -244,13 +241,13 @@ class OrderPageState extends State<OrderPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Container(
+                                SizedBox(
                                   height: 40,
                                   child: Image.network(
                                     "https://media.istockphoto.com/id/1252605665/photo/chilli-garlic-hakka-noodles-in-black-bowl-isolated-on-white-background-indo-chinese.jpg?s=612x612&w=0&k=20&c=lesS8Wt5JVauAqjVh9uPfoiGr1ZjsnjHWZyKw3zLg2E="
                                   ),
                                 ),
-                                Text("Noodles"),
+                                const Text("Noodles"),
                               ],
                             ),
                           )
@@ -261,7 +258,7 @@ class OrderPageState extends State<OrderPage> {
                             
                           },
                           child: Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.white,
@@ -269,13 +266,13 @@ class OrderPageState extends State<OrderPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Container(
+                                SizedBox(
                                   height: 40,
                                   child: Image.network(
                                     "https://media.istockphoto.com/id/687708648/photo/pasta-with-spinach-and-sausages.jpg?s=612x612&w=0&k=20&c=Jf_61NSt2kamgh2A-O7eLqRUfMhMjcqPJCNy6B76kAE="
                                   ),
                                 ),
-                                Text("Shrimp"),
+                                const Text("Shrimp"),
                               ],
                             ),
                           )
@@ -285,7 +282,7 @@ class OrderPageState extends State<OrderPage> {
                             
                           },
                           child: Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.white,
@@ -293,13 +290,13 @@ class OrderPageState extends State<OrderPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Container(
+                                SizedBox(
                                   height: 40,
                                   child: Image.network(
                                     "https://media.istockphoto.com/id/1129075054/photo/plate-of-corn-chips-nachos-with-fried-minced-meat.jpg?s=612x612&w=0&k=20&c=tymnrBUFbQRO9vvz5LYrkcBAnEbN3UqtevAnZFK_RXQ="
                                   ),
                                 ),
-                                Text("Egg"),
+                                const Text("Egg"),
                               ],
                             ),
                           )
@@ -309,7 +306,7 @@ class OrderPageState extends State<OrderPage> {
                             
                           },
                           child: Container(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.white,
@@ -317,13 +314,13 @@ class OrderPageState extends State<OrderPage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Container(
+                                SizedBox(
                                   height: 40,
                                   child: Image.network(
                                     "https://media.istockphoto.com/id/1056419208/photo/grilled-chicken-breast-and-vegetables.jpg?s=612x612&w=0&k=20&c=_seZ-9HcA9Pty-OGkNsUh9dFiGhIPhCXBTKTkmFIFi8="
                                   ),
                                 ),
-                                Text("Scallion"),
+                                const Text("Scallion"),
                               ],
                             ),
                           )
@@ -334,24 +331,24 @@ class OrderPageState extends State<OrderPage> {
                       ),
                      ),
                      ///////////
-                       SizedBox(height: 30,),
+                       const SizedBox(height: 30,),
       ///////////////////////
                     Container(
-                      margin: EdgeInsets.only(left: 35),
+                      margin: const EdgeInsets.only(left: 35),
                       alignment: Alignment.topLeft,
-                      child: Text("About",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                      child: const Text("About",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                       ),
-                       SizedBox(height: 6,),
+                       const SizedBox(height: 6,),
       
                        Container(
-                        margin: EdgeInsets.only(left: 35),
-                        child: Text("Food contains nutrients—substances essential for the growth, repair, and maintenance of body tissues and for the regulation of vital processes.")
+                        margin: const EdgeInsets.only(left: 35),
+                        child: const Text("Food contains nutrients—substances essential for the growth, repair, and maintenance of body tissues and for the regulation of vital processes.")
                         ),
 
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
       
                        Container(
-                      margin: EdgeInsets.only(right: 20),
+                      margin: const EdgeInsets.only(right: 20),
                       alignment: Alignment.bottomRight,
                       child: FloatingActionButton(
                         elevation: 10,
@@ -362,14 +359,14 @@ class OrderPageState extends State<OrderPage> {
                           //     MaterialPageRoute(
                           //         builder: (builder) => OrderPage()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.shopify_outlined,
                           color: Colors.black,
                         ),
                       ),
                     ),
 
-                    SizedBox(height: 25,)
+                    const SizedBox(height: 25,)
       
                   ],
                 ),

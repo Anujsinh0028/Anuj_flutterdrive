@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(myapp());
+  runApp(const myapp());
 }
 
+// ignore: camel_case_types
 class myapp extends StatefulWidget {
   const myapp({super.key});
 
@@ -11,6 +12,7 @@ class myapp extends StatefulWidget {
   State<myapp> createState() => _myappState();
 }
 
+// ignore: camel_case_types
 class _myappState extends State<myapp> {
   bool fvalue = false;
   @override
@@ -18,19 +20,26 @@ class _myappState extends State<myapp> {
     return MaterialApp(
       home: Scaffold(
         body: Center(
+          
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
-
-              Container(
-                child: Checkbox(value: this.fvalue,
-                onChanged: (value) {
-                  setState(() {
-                    this.fvalue=value!;
-                  });
-                },),
+              Checkbox(
+              value: fvalue,
+              onChanged: (value) {
+                setState(() {
+                  fvalue=value?? false;
+                });
+              },),
+              if(fvalue)
+               const SizedBox(
+                height: 16.0,
+                child: Text(
+                  'This is the displayed text.',
+                  style: TextStyle(fontSize: 14.0),
+                ),
               ),
-              Text("data"),
 
             ],
           ),

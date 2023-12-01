@@ -81,7 +81,7 @@ class _intropageState extends State<intropage> {
                   children: [
               Text("Welcome to Smart Spent",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),).animate().fadeIn(duration: 900.ms).slide(),
                SizedBox(height: 8,),
-              Text("Managing your ",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),).animate().fadeIn(duration:1200.ms).slide(),
+              Text("Managing your ",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),).animate().addEffect(MoveEffect(begin:Offset(100, 1) ,duration: 1220.ms) ).slide(),
                SizedBox(height: 4,),
               Text("money is about to",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold),).animate().fadeIn(duration: 1200.ms).slide(),
                SizedBox(height: 4,),

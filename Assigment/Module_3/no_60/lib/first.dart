@@ -1,6 +1,6 @@
+// ignore_for_file: camel_case_types, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
-import 'package:no_60/back.dart';
-// import 'package:no_60/home.dart';
 import 'package:no_60/order.dart';
 
 class first extends StatefulWidget {
@@ -16,25 +16,25 @@ class _firstState extends State<first> {
     return Scaffold(
       body: Container(
         height: MediaQuery.sizeOf(context).height,
-        color: Color.fromARGB(255, 229, 223, 223),
+        color: const Color.fromARGB(255, 229, 223, 223),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
             height: 30,
           ),
 
             Container(
           width: MediaQuery.sizeOf(context).width,
-          margin: EdgeInsets.all(25),
+          margin: const EdgeInsets.all(25),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
                InkWell(
                 onTap: (){
-              setState(() {
-                Navigator.push(context,
-                 MaterialPageRoute(builder: (builder)=> back()));
-              });
+              // setState(() {
+              //   Navigator.push(context,
+              //    MaterialPageRoute(builder: (builder)=> const back()));
+              // });
              },
 
             child: Container(
@@ -44,15 +44,15 @@ class _firstState extends State<first> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(100),
               ),         
-              child: Icon(Icons.arrow_back),
+              child: const Icon(Icons.arrow_back),
             ),
           ),
            InkWell( 
              onTap: (){
-              setState(() {
-                Navigator.push(context,
-                 MaterialPageRoute(builder: (builder)=> back()));
-              });
+              // setState(() {
+              //   Navigator.push(context,
+              //    MaterialPageRoute(builder: (builder)=> const back()));
+              // });
              },
 
             child: Container(
@@ -62,7 +62,7 @@ class _firstState extends State<first> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(100),
                ),
-              child: Icon(Icons.search),
+              child: const Icon(Icons.search),
             ),
           ),
       
@@ -71,12 +71,12 @@ class _firstState extends State<first> {
           
          ),
 
-         SizedBox(height: 20,),
+         const SizedBox(height: 20,),
 ////////////
 
          Container(
           // width: ,
-          margin: EdgeInsets.only(left:25,right: 30),
+          margin: const EdgeInsets.only(left:25,right: 30),
           // height: 150,
           // color: Colors.amber,
           
@@ -84,7 +84,7 @@ class _firstState extends State<first> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,  
             children: [
 
-              Container(
+              SizedBox(
                 // color: Colors.white,
                 width: MediaQuery.sizeOf(context).width/1.7,
                 child: Column(
@@ -94,40 +94,40 @@ class _firstState extends State<first> {
                     Container(
                       alignment: Alignment.topLeft,
                       //  margin: EdgeInsets.only(right: 120),
-                      child: Text("Restaurant",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                      child: const Text("Restaurant",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
                     ),
 
-                    SizedBox(height: 10,),
+                    const SizedBox(height: 10,),
 
                     Container(
                       // color: Colors.amber,
                       // alignment: Alignment.topLeft,
                       // margin: EdgeInsets.only(right: 85),
                       // width: 200,
-                      margin: EdgeInsets.only(right:55),
+                      margin: const EdgeInsets.only(right:55),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
 
-                          padding: EdgeInsets.all(4),
+                          padding: const EdgeInsets.all(4),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
-                            color: Color.fromARGB(255, 164, 164, 156),
+                            color: const Color.fromARGB(255, 164, 164, 156),
                           ),
-                          child: Text("20-30min",style: TextStyle(color: Colors.white),),
+                          child: const Text("20-30min",style: TextStyle(color: Colors.white),),
                         ),
-                        Text("2.4km",style: TextStyle(color: Color.fromARGB(255, 164, 164, 156),),),
-                        Text("Restaurant",style:TextStyle(color: Color.fromARGB(255, 164, 164, 156),) ,),
+                        const Text("2.4km",style: TextStyle(color: Color.fromARGB(255, 164, 164, 156),),),
+                        const Text("Restaurant",style:TextStyle(color: Color.fromARGB(255, 164, 164, 156),) ,),
                       ],
                     ),),
 
-                    SizedBox(height: 15,),
+                    const SizedBox(height: 15,),
 
                     Container(
                       alignment: Alignment.bottomLeft,
                       // margin: EdgeInsets.only(right: 80),
-                      child: Text("Orange Sandwiches is delicious",style: TextStyle(fontSize: 15),),
+                      child: const Text("Orange Sandwiches is delicious",style: TextStyle(fontSize: 15),),
                     ),
 
                   ]
@@ -144,14 +144,14 @@ class _firstState extends State<first> {
                             // margin: EdgeInsets.only(left:10,bottom:30),
                             height: 50,
                             width: 50,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white),
                               child: Image.network("https://img.freepik.com/premium-vector/letter-r-logo-design-logo-template-creative-r-logo-vector-symbol_487414-3674.jpg?w=740"),
                           ),
 
-                          SizedBox(height: 25,),
+                          const SizedBox(height: 25,),
 
-                          Container(child: Row(
+                          Container(child: const Row(
                             children: [
                               Icon(Icons.star_outline,color: Colors.amber,),
                               Text("4.7",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
@@ -166,101 +166,101 @@ class _firstState extends State<first> {
 
          ),
 /////////////////////////
-         SizedBox(
+         const SizedBox(
           height: 30,
          ),
 
          SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-           child: Container(
+           child: SizedBox(
             height: 40,
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
 
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
 
                 InkWell(
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Center(child: Text("Recommanded",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),)),
+                    child: const Center(child: Text("Recommanded",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),)),
                   ),
                 ),
 
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
          
                 InkWell(
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Center(child: Text("Popular",style: TextStyle(fontWeight: FontWeight.bold),)),
+                    child: const Center(child: Text("Popular",style: TextStyle(fontWeight: FontWeight.bold),)),
                   ),
                 ),
 
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
          
                 InkWell(
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Center(child: Text("Noodles",style: TextStyle(fontWeight: FontWeight.bold,),)),
+                    child: const Center(child: Text("Noodles",style: TextStyle(fontWeight: FontWeight.bold,),)),
                   ),
                 ),
 
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
          
                 InkWell(
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
 
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Center(child: Text("Pizza",style: TextStyle(fontWeight: FontWeight.bold),)),
+                    child: const Center(child: Text("Pizza",style: TextStyle(fontWeight: FontWeight.bold),)),
                   ),
                 ),
 
-                 SizedBox(width: 20,),
+                 const SizedBox(width: 20,),
 
                  InkWell(
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
 
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Center(child: Text("Pizza",style: TextStyle(fontWeight: FontWeight.bold),)),
+                    child: const Center(child: Text("Pizza",style: TextStyle(fontWeight: FontWeight.bold),)),
                   ),
                 ),
 
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
          
               ],
             ),
            ),
          ),
 /////////////////////
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
 
           Card(
-            margin: EdgeInsets.only(left: 25,right: 25),
+            margin: const EdgeInsets.only(left: 25,right: 25),
             elevation: 10,
             
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.sizeOf(context).width,
               height: 100,
 
@@ -270,7 +270,7 @@ class _firstState extends State<first> {
                   
                   Row(                   
                     children: [
-                      SizedBox(width: 2,),
+                      const SizedBox(width: 2,),
 
                   Container(
                     child: Image.network(
@@ -282,7 +282,7 @@ class _firstState extends State<first> {
 
                   Container(  
                     
-                    child: Column(
+                    child: const Column(
                     
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -305,8 +305,8 @@ class _firstState extends State<first> {
                         alignment: Alignment.topRight,
                         child: IconButton(onPressed: (){
                           Navigator.push(context, 
-                          MaterialPageRoute(builder: (builder)=>OrderPage()));
-                        }, icon: Icon(Icons.slideshow)),
+                          MaterialPageRoute(builder: (builder)=>const OrderPage()));
+                        }, icon: const Icon(Icons.slideshow)),
                       ),
 
                 ],
@@ -314,15 +314,15 @@ class _firstState extends State<first> {
             ),
           ),
 
-            SizedBox(
+            const SizedBox(
             height: 20,
           ),
 ///////////////////////
            Card(
-            margin: EdgeInsets.only(left: 25,right: 25),
+            margin: const EdgeInsets.only(left: 25,right: 25),
             elevation: 10,
             
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.sizeOf(context).width,
               height: 100,
 
@@ -332,7 +332,7 @@ class _firstState extends State<first> {
                   
                   Row(                   
                     children: [
-                      SizedBox(width: 2,),
+                      const SizedBox(width: 2,),
 
                   Container(
                     child: Image.network(
@@ -344,7 +344,7 @@ class _firstState extends State<first> {
 
                   Container(  
                     
-                    child: Column(
+                    child: const Column(
                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -367,23 +367,23 @@ class _firstState extends State<first> {
                         alignment: Alignment.topRight,
                         child: IconButton(onPressed: (){
                           Navigator.push(context, 
-                          MaterialPageRoute(builder: (builder)=>OrderPage()));
-                        }, icon: Icon(Icons.slideshow)),
+                          MaterialPageRoute(builder: (builder)=>const OrderPage()));
+                        }, icon: const Icon(Icons.slideshow)),
                       ),
 
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
 //////////////////////////
            Card(
-            margin: EdgeInsets.only(left: 25,right: 25),
+            margin: const EdgeInsets.only(left: 25,right: 25),
             elevation: 10,
             
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.sizeOf(context).width,
               height: 100,
 
@@ -393,7 +393,7 @@ class _firstState extends State<first> {
                   
                   Row(                   
                     children: [
-                      SizedBox(width: 2,),
+                      const SizedBox(width: 2,),
 
                   Container(
                     child: Image.network(
@@ -405,7 +405,7 @@ class _firstState extends State<first> {
 
                   Container(  
                     
-                    child: Column(
+                    child: const Column(
                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -428,29 +428,29 @@ class _firstState extends State<first> {
                         alignment: Alignment.topRight,
                         child: IconButton(onPressed: (){
                           Navigator.push(context, 
-                          MaterialPageRoute(builder: (builder)=>OrderPage()));
-                        }, icon: Icon(Icons.slideshow)),
+                          MaterialPageRoute(builder: (builder)=>const OrderPage()));
+                        }, icon: const Icon(Icons.slideshow)),
                       ),
 
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 65,
           ),
 /////////////////////////   
           Container(
-            margin: EdgeInsets.only(right: 20),
+            margin: const EdgeInsets.only(right: 20),
             alignment: Alignment.bottomRight,
             child: FloatingActionButton(
               elevation: 10,
               backgroundColor: Colors.amber,
             onPressed: (){
                Navigator.push(context, 
-                          MaterialPageRoute(builder: (builder)=>OrderPage()));
+                          MaterialPageRoute(builder: (builder)=>const OrderPage()));
             },
-            child: Icon(Icons.shopify_outlined,color: Colors.black,),
+            child: const Icon(Icons.shopify_outlined,color: Colors.black,),
             ),
           ),
 

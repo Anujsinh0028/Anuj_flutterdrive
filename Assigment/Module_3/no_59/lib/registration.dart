@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:no_59/login.dart';
 
+// ignore: camel_case_types
 class register extends StatefulWidget {
   const register({super.key});
 
@@ -9,6 +10,7 @@ class register extends StatefulWidget {
   State<register> createState() => _registerState();
 }
 
+// ignore: camel_case_types
 class _registerState extends State<register> {
   bool firstvalue = false;
   bool secondvalue = false;
@@ -18,7 +20,7 @@ class _registerState extends State<register> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.purple
         ),
         child: Column(
@@ -28,24 +30,24 @@ class _registerState extends State<register> {
             Center(
               child: SingleChildScrollView(
                 child: Container(
-                padding: EdgeInsets.all(25),
+                padding: const EdgeInsets.all(25),
                 // height: MediaQuery.sizeOf(context).height / 2,
                 width: MediaQuery.sizeOf(context).width / 1.2,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(40),
-                    boxShadow: [BoxShadow(blurRadius: 0, color: Color.fromARGB(255, 243, 246, 249))]),
+                    boxShadow: const [BoxShadow(blurRadius: 0, color: Color.fromARGB(255, 243, 246, 249))]),
                     
                     child: Column(children: [
                     
-                       Center(
+                       const Center(
                     child: Text(
                   "Registration Form",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: Colors.purple),
                 )),
                     
-                SizedBox(height: 20,),
-                TextField(  
+                const SizedBox(height: 20,),
+                const TextField(  
                   
                   decoration: InputDecoration(
                     hintText: "name",
@@ -57,14 +59,14 @@ class _registerState extends State<register> {
                   maxLength: 10,
                   keyboardType: TextInputType.number,
                   inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Mobile number",
                      hintStyle: TextStyle(color: Colors.purple),
                     prefixIcon: Icon(Icons.phone_android,color: Colors.purple,)
                     
                   ),
                 ),
-                TextField(
+                const TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     hintText: "Email",
@@ -72,7 +74,7 @@ class _registerState extends State<register> {
                     prefixIcon: Icon(Icons.email_outlined,color: Colors.purple,)
                   ),
                 ),
-                TextField(
+                const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: "Password",
@@ -81,49 +83,49 @@ class _registerState extends State<register> {
                   ),
                 ),
                     
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                     
-                Text("HOBBY:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.purple),),
+                const Text("HOBBY:",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.purple),),
                     
                 Row(
                   children: [
                     Checkbox(
-                      fillColor: MaterialStatePropertyAll(Colors.purple),
-                        value: this.firstvalue,
+                      fillColor: const MaterialStatePropertyAll(Colors.purple),
+                        value: firstvalue,
                         onChanged: (bool? value) {
                           setState(() {
-                            this.firstvalue = value!;
+                            firstvalue = value!;
                           });
                         }),
-                         Text("Sport",style: TextStyle(color: Colors.purple),),
+                         const Text("Sport",style: TextStyle(color: Colors.purple),),
                   ],
                 ),
                     
                   Row(
                   children: [
                     Checkbox(
-                       fillColor: MaterialStatePropertyAll(Colors.purple),
-                        value: this.secondvalue,
+                       fillColor: const MaterialStatePropertyAll(Colors.purple),
+                        value: secondvalue,
                         onChanged: (bool? value) {
                           setState(() {
-                            this.secondvalue = value!;
+                            secondvalue = value!;
                           });
                         }),
-                         Text("Reading",style: TextStyle(color: Colors.purple),),
+                         const Text("Reading",style: TextStyle(color: Colors.purple),),
                   ],
                 ),
                     
                   Row(
                   children: [
                     Checkbox(
-                       fillColor: MaterialStatePropertyAll(Colors.purple),
-                        value: this.thirdvalue,
+                       fillColor: const MaterialStatePropertyAll(Colors.purple),
+                        value: thirdvalue,
                         onChanged: (bool? value) {
                           setState(() {
-                            this.thirdvalue = value!;
+                            thirdvalue = value!;
                           });
                         }),
-                         Text("Gaming",style: TextStyle(color: Colors.purple),),
+                         const Text("Gaming",style: TextStyle(color: Colors.purple),),
                   ],
                 ),
                            
@@ -135,9 +137,9 @@ class _registerState extends State<register> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (BuildContext context) => home_screen()));
+                            builder: (BuildContext context) => const home_screen()));
                   },
-                  child: Text("Register Now"),
+                  child: const Text("Register Now"),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                       Colors.purple,

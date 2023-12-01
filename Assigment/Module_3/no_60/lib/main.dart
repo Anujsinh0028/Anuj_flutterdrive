@@ -1,12 +1,10 @@
+// ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
-import 'package:no_60/first.dart';
 import 'package:no_60/menu.dart';
-// import 'package:no_60/home.dart';
-import 'package:no_60/order.dart';
-import 'package:no_60/test.dart';
+
 
 void main(){
-  runApp(foodapp());
+  runApp(const foodapp());
 }
 
 class foodapp extends StatefulWidget {
@@ -19,7 +17,7 @@ class foodapp extends StatefulWidget {
 class _foodappState extends State<foodapp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: menu(),
     );

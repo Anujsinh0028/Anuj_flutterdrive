@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 void main()
 {
-  runApp(Myapp());
+  runApp(const Myapp());
 
 }
 
@@ -33,19 +33,13 @@ int index=0;
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          child: Column(
-            children: [
-             Container(
-              margin: EdgeInsets.all(50),
-              padding: EdgeInsets.all(50),
-              
-              color: color[index],
-              child: ElevatedButton(onPressed: (){changecolor();}, child: Text("change background")),
-             )
-             
-
-            ],
-          ),
+         width: MediaQuery.sizeOf(context).width,
+         height: MediaQuery.sizeOf(context).height,
+         padding: const EdgeInsets.all(270),
+         
+         color: color[index],
+         child: ElevatedButton(
+          onPressed: (){changecolor();}, child: const Text("change background")),
         ),
       ),
     );

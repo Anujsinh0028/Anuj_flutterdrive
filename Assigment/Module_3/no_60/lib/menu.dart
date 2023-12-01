@@ -1,4 +1,7 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
+import 'package:no_60/first.dart';
 
 class menu extends StatefulWidget {
   const menu({super.key});
@@ -13,22 +16,24 @@ class _menuState extends State<menu> {
     return Scaffold(
       body: ListView(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
 
           Container(
-            margin: EdgeInsets.only(left: 20,right: 20),
+            margin: const EdgeInsets.only(left: 20,right: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Menu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                const Text("Menu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                 Row(
                   children: [
                     IconButton(onPressed: (){},
-                     icon: Icon(Icons.search,color: Colors.black26,size: 30,)),
-                     IconButton(onPressed: (){},
-                     icon: Icon(Icons.filter_alt_outlined,size: 30,))
+                     icon: const Icon(Icons.search,color: Colors.black26,size: 30,)),
+                     IconButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (builder)=>first()));
+                     },
+                     icon: const Icon(Icons.filter_alt_outlined,size: 30,))
                   ],
                 )
               ],
@@ -40,9 +45,9 @@ class _menuState extends State<menu> {
             children: [
                   Container(
                     // padding: EdgeInsets.all(10),
-                    margin: EdgeInsets.only(left: 20, right: 20),
+                    margin: const EdgeInsets.only(left: 20, right: 20),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(150, 237, 236, 237),
+                      color: const Color.fromARGB(150, 237, 236, 237),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: TabBar(
@@ -54,7 +59,7 @@ class _menuState extends State<menu> {
                         ),
                         labelColor: Colors.black,
                         unselectedLabelColor: Colors.black,
-                        tabs: [
+                        tabs: const [
                           Tab(
                             text: "Kinza",
                           ),
@@ -77,7 +82,7 @@ class _menuState extends State<menu> {
           child:Column(
             children: [
                   Container(
-                    margin: EdgeInsets.only(left: 0, right: 0),
+                    margin: const EdgeInsets.only(left: 0, right: 0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -87,8 +92,8 @@ class _menuState extends State<menu> {
                         ),
                         labelColor: Colors.black,
                         unselectedLabelColor: Colors.black26,
-                        labelPadding: EdgeInsets.only(left: 0),
-                        tabs: [
+                        labelPadding: const EdgeInsets.only(left: 0),
+                        tabs: const [
                           Tab(
                             text: "All",
                           ),
@@ -121,20 +126,20 @@ class _menuState extends State<menu> {
           
           
 ///////////////////
-       SizedBox(
+       const SizedBox(
             height: 30,
           ),
           Container(
-            margin: EdgeInsets.only(left: 30,right: 30),
+            margin: const EdgeInsets.only(left: 30,right: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Container(
-                width: 150,
+              SizedBox(
+                width: MediaQuery.sizeOf(context).width/2.5,
                 // color: Colors.red,
                 child: Column(
                   children: [
-                      Container(
+                      SizedBox(
                               height: 150,
                               width: 150,
                               child: ClipRRect(
@@ -144,10 +149,11 @@ class _menuState extends State<menu> {
                                   fit: BoxFit.cover,
                                 ),
                               )),
-                              SizedBox(height: 10,),
-                          Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
-                          SizedBox(height: 10,),
-                          Row(
+                              const SizedBox(height: 10,),
+                          const Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
+                          const SizedBox(height: 10,),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Icon(Icons.star,color: Colors.amber,),
                               Icon(Icons.star,color: Colors.amber,),
@@ -157,28 +163,28 @@ class _menuState extends State<menu> {
                               Text("(15)",style: TextStyle(fontSize: 17),)
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$13.50",),
+                              const Text("\$13.50",),
                               InkWell(
                                 onTap: () {
                                   
                                 },
-                                child: Icon(Icons.add_box_rounded,color: Colors.amber,))
+                                child: const Icon(Icons.add_box_rounded,color: Colors.amber,))
                             ],
                           )
                         ],
                 ),
               ),
 
-             Container(
-                width: 150,
+             SizedBox(
+                width: MediaQuery.sizeOf(context).width/2.5,
                 // color: Colors.red,
                 child: Column(
                   children: [
-                      Container(
+                      SizedBox(
                               height: 150,
                               width: 150,
                               child: ClipRRect(
@@ -188,10 +194,11 @@ class _menuState extends State<menu> {
                                   fit: BoxFit.cover,
                                 ),
                               )),
-                              SizedBox(height: 10,),
-                          Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
-                          SizedBox(height: 10,),
-                          Row(
+                              const SizedBox(height: 10,),
+                          const Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
+                          const SizedBox(height: 10,),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Icon(Icons.star,color: Colors.amber,),
                               Icon(Icons.star,color: Colors.amber,),
@@ -201,16 +208,16 @@ class _menuState extends State<menu> {
                               Text("(15)",style: TextStyle(fontSize: 17),)
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$13.50",),
+                              const Text("\$13.50",),
                               InkWell(
                                 onTap: () {
                                   
                                 },
-                                child: Icon(Icons.add_box_rounded,color: Colors.amber,))
+                                child: const Icon(Icons.add_box_rounded,color: Colors.amber,))
                             ],
                           )
                         ],
@@ -220,21 +227,21 @@ class _menuState extends State<menu> {
             ),
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
 
           Container(
-            margin: EdgeInsets.only(left: 30,right: 30),
+            margin: const EdgeInsets.only(left: 30,right: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Container(
-                width: 150,
+              SizedBox(
+                width: MediaQuery.sizeOf(context).width/2.5,
                 // color: Colors.red,
                 child: Column(
                   children: [
-                      Container(
+                      SizedBox(
                               height: 150,
                               width: 150,
                               child: ClipRRect(
@@ -244,10 +251,11 @@ class _menuState extends State<menu> {
                                   fit: BoxFit.cover,
                                 ),
                               )),
-                              SizedBox(height: 10,),
-                          Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
-                          SizedBox(height: 10,),
-                          Row(
+                              const SizedBox(height: 10,),
+                          const Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
+                          const SizedBox(height: 10,),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Icon(Icons.star,color: Colors.amber,),
                               Icon(Icons.star,color: Colors.amber,),
@@ -257,28 +265,27 @@ class _menuState extends State<menu> {
                               Text("(15)",style: TextStyle(fontSize: 17),)
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$13.50",),
+                              const Text("\$13.50",),
                               InkWell(
                                 onTap: () {
                                   
                                 },
-                                child: Icon(Icons.add_box_rounded,color: Colors.amber,))
+                                child: const Icon(Icons.add_box_rounded,color: Colors.amber,))
                             ],
                           )
                         ],
                 ),
               ),
 
-             Container(
-                width: 150,
-                // color: Colors.red,
+             SizedBox(
+                width: MediaQuery.sizeOf(context).width/2.5,
                 child: Column(
                   children: [
-                      Container(
+                      SizedBox(
                               height: 150,
                               width: 150,
                               child: ClipRRect(
@@ -288,10 +295,11 @@ class _menuState extends State<menu> {
                                   fit: BoxFit.cover,
                                 ),
                               )),
-                              SizedBox(height: 10,),
-                          Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
-                          SizedBox(height: 10,),
-                          Row(
+                              const SizedBox(height: 10,),
+                          const Text("Vegatable And \n Poached Egg",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),),
+                          const SizedBox(height: 10,),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Icon(Icons.star,color: Colors.amber,),
                               Icon(Icons.star,color: Colors.amber,),
@@ -301,16 +309,16 @@ class _menuState extends State<menu> {
                               Text("(15)",style: TextStyle(fontSize: 17),)
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("\$13.50",),
+                              const Text("\$13.50",),
                               InkWell(
                                 onTap: () {
                                   
                                 },
-                                child: Icon(Icons.add_box_rounded,color: Colors.amber,))
+                                child: const Icon(Icons.add_box_rounded,color: Colors.amber,))
                             ],
                           )
                         ],
@@ -332,7 +340,7 @@ class _menuState extends State<menu> {
 
           fixedColor: Colors.yellow,
           elevation: 0,
-          backgroundColor: Color.fromARGB(31, 164, 164, 164),
+          backgroundColor: const Color.fromARGB(31, 164, 164, 164),
           
           // onTap: (value) {
           //   setState(() {
@@ -340,7 +348,7 @@ class _menuState extends State<menu> {
           //   });
           // },
 
-          items: [
+          items: const [
           BottomNavigationBarItem(icon: Icon(Icons.menu_book,),label: "Menu"),
            BottomNavigationBarItem(icon: Icon(Icons.account_box,),label: "account"),
            BottomNavigationBarItem(icon: Icon(Icons.shopping_bag,),label: "Cart"),

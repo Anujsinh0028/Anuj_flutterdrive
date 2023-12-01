@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(myapp());
+  runApp(const myapp());
 }
 
+// ignore: camel_case_types
 class myapp extends StatefulWidget {
   const myapp({super.key});
 
@@ -12,6 +12,7 @@ class myapp extends StatefulWidget {
   State<myapp> createState() => _myappState();
 }
 
+// ignore: camel_case_types
 class _myappState extends State<myapp> {
   Color _selectedColor = Colors.white;
 
@@ -30,26 +31,26 @@ class _myappState extends State<myapp> {
           color: _selectedColor,
           child: Column(children: [
             Container(
-              margin: EdgeInsets.only(top: 300),
+              margin: const EdgeInsets.only(top: 300),
               child: Column(children: [
                   Radio(
                   value: Colors.red,
                   groupValue: _selectedColor,
                   onChanged: _onColorSelected,
                 ),
-                Text('Red'),
+                const Text('Red'),
                 Radio(
                   value: Colors.green,
                   groupValue: _selectedColor,
                   onChanged: _onColorSelected,
                 ),
-                Text('Green'),
+                const Text('Green'),
                 Radio(
                   value: Colors.blue,
                   groupValue: _selectedColor,
                   onChanged: _onColorSelected,
                 ),
-                Text('Blue'),
+                const Text('Blue'),
               ]),
             ),
         

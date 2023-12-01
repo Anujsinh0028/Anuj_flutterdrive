@@ -16,7 +16,7 @@ void main(){
     print("tuesday");
     break;
 
-     case 3:
+    case 3:
     print("wednday");
     break;
 

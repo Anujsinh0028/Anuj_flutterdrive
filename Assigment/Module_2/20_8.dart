@@ -1,2 +1,0 @@
-// summation of given number
-

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:no_59/login.dart';
 import 'package:no_59/registration.dart';
 
 void main(){
-  runApp(loginApp());
+  runApp(const loginApp());
 }
 
 class loginApp extends StatefulWidget {
@@ -16,7 +15,7 @@ class loginApp extends StatefulWidget {
 class _loginAppState extends State<loginApp> {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: register(),
     );
